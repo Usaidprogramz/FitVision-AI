@@ -1,0 +1,11 @@
+# FitVision AI - current Python prototype
+# Install from the project root with: pip install -r requirements.txt
+
+mediapipe
+opencv-python
+numpy
+
+# Add these only when the corresponding features are implemented:
+# fastapi
+# uvicorn[standard]
+# pandas
