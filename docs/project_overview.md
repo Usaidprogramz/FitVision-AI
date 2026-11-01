@@ -1,49 +1,84 @@
-# FitVision AI – Project Overview
+# FitVision AI -- Project Overview
 
-## 1. Introduction
+## Introduction
 
-FitVision AI is a lightweight computer vision-based fitness system that uses pose estimation to recognize exercises, count repetitions, monitor basic exercise posture, and provide real-time feedback.
+FitVision AI is a lightweight computer vision-based fitness system
+designed to analyze selected exercise movements using a camera and pose
+estimation. It aims to count repetitions and provide basic visual
+feedback about exercise form.
 
-The system uses a camera to capture a user's movements and computer vision techniques to identify body landmarks and analyze exercise movements.
+## Problem Statement
 
-## 2. Problem Statement
+People may exercise without a convenient way to monitor repetitions or
+receive simple feedback about visible movement patterns. FitVision AI
+aims to provide an accessible computer vision-based monitoring system
+for selected exercises.
 
-Many people exercise without proper guidance or a convenient way to monitor their exercise repetitions and basic posture. FitVision AI aims to provide an accessible computer vision-based system that helps users monitor selected exercises and receive simple visual feedback.
+## Objectives
 
-## 3. Project Objectives
+-   Detect human body landmarks from camera input.
+-   Recognize selected exercises.
+-   Count repetitions automatically.
+-   Provide basic real-time visual posture feedback.
+-   Calculate an indicative exercise form score.
+-   Save workout summaries and history.
+-   Develop web and mobile interfaces.
+-   Compare MediaPipe Pose and MoveNet Lightning.
 
-- Detect human body landmarks using pose estimation.
-- Recognize selected fitness exercises.
-- Automatically count exercise repetitions.
-- Provide basic real-time posture feedback.
-- Generate exercise form scores.
-- Store workout summaries and history.
-- Develop web and mobile interfaces.
-- Compare MediaPipe Pose and MoveNet Lightning.
+## Initial Exercises
 
-## 4. Supported Exercises
+1.  Bicep curls
+2.  Squats
+3.  Push-ups
+4.  Lunges
 
-1. Bicep Curls
-2. Squats
-3. Push-ups
-4. Lunges
+The current working prototype focuses on bicep curls. The other
+exercises are planned for implementation.
 
-## 5. Technologies
+## Planned Technology Stack
 
-- Python
-- OpenCV
-- MediaPipe Pose
-- MoveNet Lightning
-- NumPy
-- FastAPI
-- SQLite / PostgreSQL
-- HTML, CSS and JavaScript
-- Flutter
+  Area                      Technology
+  ------------------------- -----------------------------------
+  Programming               Python
+  Image processing          OpenCV
+  Pose estimation           MediaPipe Pose, MoveNet Lightning
+  Numerical operations      NumPy
+  Backend                   FastAPI
+  Initial database          SQLite
+  Possible later database   PostgreSQL
+  Web interface             HTML, CSS, JavaScript
+  Mobile interface          Flutter
+  Version control           Git and GitHub
 
-## 6. Project Scope
+## Current Prototype Features
 
-The initial version focuses on four selected exercises and basic visual posture feedback. It is not a medical, physiotherapy, or professional injury-prevention system.
+-   Webcam pose detection using MediaPipe Pose Landmarker.
+-   Body landmark and skeleton visualization.
+-   Bicep-curl elbow-angle calculation.
+-   Bicep-curl repetition counting using movement thresholds.
+-   Basic form feedback and a heuristic score.
+-   CSV logging of completed bicep-curl repetitions.
 
-## 7. Expected Outcome
+## Planned Features
 
-A lightweight fitness monitoring application with exercise recognition, repetition counting, basic posture feedback, workout summaries, and web and mobile interfaces.
+-   Squat, push-up, and lunge analysis.
+-   Exercise selection and recognition workflow.
+-   MediaPipe and MoveNet comparison experiments.
+-   FastAPI backend and workout history.
+-   Web and Flutter mobile interfaces.
+-   Workout summaries and progress reports.
+
+## Scope and Limitations
+
+The system focuses on selected exercises and visible movement cues.
+Feedback and scores are for general fitness monitoring only; they are
+not medical advice, physiotherapy guidance, or professional assessment.
+Camera angle, lighting, occlusion, and landmark quality may affect
+results. The application should avoid confident assessments when
+required landmarks are unreliable.
+
+## Expected Outcome
+
+A lightweight fitness monitoring application that analyzes selected
+exercises, counts repetitions, provides basic visual feedback, and
+records workout summaries.
